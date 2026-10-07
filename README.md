@@ -26,18 +26,25 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game sets a range for you depending on your difficulty, and a limited number of attempts, and you are to attempt to guess the random number which exists within range.
 - [ ] Detail which bugs you found.
+The instructions did not always update with the difficulty changes, so the range remained not what it was supposed to be, the same with the SECRET number that was to be found.  Also the NEXT GAME button would not start another game and freeze on YOU WON or YOU LOST.
 - [ ] Explain what fixes you applied.
+I updated the range in the instructions, changing as the difficulty changes.  I also made sure the SECRET is always within range.  For the NEXT GAME button bug, I made sure that when you now click it, a new game actually does succesfully start and carries your score with it.
 
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
 1. <!-- Describe this step -->
+Run the game.
 2. <!-- Describe this step -->
+In the instructions you will see the range from which you are to make your guesses.  When you change the difficulty, this range would also change.  (A fix I implemented.)
 3. <!-- Describe this step -->
+Then, as you run the game, going through your attempts.  When you finally Win or run out of attempts and lose.  You can then click the NEXT GAME button to start a fresh game while your score carries over. (Another fix I implemented.)
 4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+You will also notice through it all, the number always stays within the prescribed range in the instructions.  (Another fix I implemented, it used to not be in range always.)
+
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
@@ -48,6 +55,16 @@ Describe your fixed game in numbered steps so a reader can follow along without 
 # pytest tests/
 # ========================= X passed in 0.XXs =========================
 ```
+
+============================================================== test session starts ===============================================================
+platform win32 -- Python 3.13.15, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\student\Downloads\Project\ai110-module1show-gameglitchinvestigator-starter
+plugins: anyio-4.15.1
+collected 14 items                                                                                                                                
+
+tests\test_game_logic.py ..............                                                                                                     [100%]
+
+=============================================================== 14 passed in 4.61s ===============================================================
 
 ## 🚀 Stretch Features
 
